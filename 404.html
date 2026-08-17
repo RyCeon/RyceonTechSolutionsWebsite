@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Ryceon Tech</title>
+<meta name="description" content="The page you're looking for doesn't exist. Head back to Ryceon Tech's homepage to explore our web development, design, and marketing services.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://ryceontech.com/404.html">
+
+<link rel="icon" href="images/logo-mark-black.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header header-solid" id="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Ryceon Tech home">
+      <img src="images/logo-full-white.png" alt="Ryceon Tech" width="126" height="34">
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta-mobile">Get Started</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="error-page">
+    <div class="hero-mesh" aria-hidden="true"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <div class="flex-center" style="flex-direction:column;">
+        <span class="error-code">404</span>
+        <h1 style="color:#fff; margin-top: var(--space-4);">This page took a wrong turn</h1>
+        <p style="color: var(--color-text-inverse-muted); max-width: 480px; margin: var(--space-3) auto var(--space-6);">
+          The page you're looking for doesn't exist or may have moved. Let's get you back on track.
+        </p>
+        <div class="cta-actions">
+          <a href="index.html" class="btn btn-primary">Back to Home <i data-lucide="house"></i></a>
+          <a href="contact.html" class="btn btn-ghost">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script>window.addEventListener("DOMContentLoaded", function(){ if (window.lucide) lucide.createIcons(); });</script>
+</body>
+</html>

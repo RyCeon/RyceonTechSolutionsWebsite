@@ -1,0 +1,392 @@
+/* ==========================================================================
+   Ryceon Tech — Page-specific styles: pricing, services, contact
+   ========================================================================== */
+
+/* Anchor offset so sticky header doesn't cover section headings */
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + var(--space-3));
+}
+
+/* ------------------------- Services page ------------------------- */
+.service-block {
+  padding-block: var(--space-8);
+}
+
+.service-block:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.service-block-header {
+  margin-bottom: var(--space-3);
+}
+
+.service-sub-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 640px) {
+  .service-sub-grid { grid-template-columns: 1fr; }
+}
+
+.service-sub-card {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-alt);
+}
+
+.service-sub-card .icon-badge {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.service-sub-card .icon-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.service-sub-card h4 {
+  margin-bottom: var(--space-1);
+}
+
+.service-sub-card p {
+  font-size: 0.92rem;
+}
+
+.services-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+/* ------------------------- Pricing ------------------------- */
+.pricing-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-7);
+  flex-wrap: wrap;
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pricing-card.is-popular {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.pricing-card h3 {
+  margin-bottom: var(--space-2);
+}
+
+.pricing-card .price {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-block: var(--space-3);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.pricing-card .price span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.pricing-meta {
+  display: flex;
+  gap: var(--space-4);
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.pricing-features svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pricing-note-band {
+  margin-top: var(--space-6);
+  text-align: center;
+  color: var(--color-text-soft);
+  font-size: 0.92rem;
+}
+
+/* A la carte table */
+.addon-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.addon-table {
+  min-width: 520px;
+}
+
+.addon-table th,
+.addon-table td {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.addon-table thead th {
+  background: var(--color-bg-alt);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-soft);
+}
+
+.addon-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.addon-table td:last-child {
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* Comparison table: real table on desktop, stacked cards on mobile */
+.compare-table-wrap {
+  overflow-x: auto;
+}
+
+.compare-table {
+  min-width: 720px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.compare-table th:first-child,
+.compare-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.compare-table thead th {
+  background: var(--color-dark);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.compare-table thead th.popular-col {
+  background: var(--color-primary);
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background: var(--color-bg-alt);
+}
+
+.compare-table td svg.yes {
+  color: #0a8a5f;
+  width: 20px;
+  height: 20px;
+}
+
+.compare-table td svg.no {
+  color: var(--color-border);
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .compare-table-wrap.desktop-only { display: none; }
+
+  .compare-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .compare-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+  }
+
+  .compare-card h4 {
+    margin-bottom: var(--space-3);
+    font-family: var(--font-display);
+  }
+
+  .compare-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .compare-card li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-3);
+    font-size: 0.9rem;
+    padding-block: var(--space-2);
+    border-bottom: 1px dashed var(--color-border);
+  }
+
+  .compare-card li span:last-child {
+    color: var(--color-text-soft);
+    text-align: right;
+  }
+}
+
+@media (min-width: 769px) {
+  .compare-cards { display: none; }
+}
+
+.custom-quote-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .custom-quote-grid { grid-template-columns: 1fr; }
+}
+
+.custom-quote-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.custom-quote-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.custom-quote-card ul li::before {
+  content: "— ";
+  color: var(--color-primary);
+}
+
+/* ------------------------- Contact page ------------------------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; }
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.contact-info-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.contact-info-item h4 {
+  margin-bottom: var(--space-1);
+}
+
+.contact-info-item p,
+.contact-info-item a {
+  font-size: 0.95rem;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: 0.92rem;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--space-2);
+  border-bottom: 1px dashed var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.contact-form-card {
+  padding: var(--space-6);
+}
+
+@media (max-width: 480px) {
+  .contact-form-card { padding: var(--space-4); }
+}
